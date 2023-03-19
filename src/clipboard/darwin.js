@@ -18,7 +18,6 @@ class ClipboardDarwin {
             '((clipboard info) as string) contains "«class PNGf»"',
         ]);
         const result = await getResult(script);
-        console.log(result)
         return isFalse(result) ? false : true;
 
         async function getResult(task) {

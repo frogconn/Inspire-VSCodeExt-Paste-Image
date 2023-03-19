@@ -74,6 +74,10 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
 
 ## Release Notes
 
+### 2.7.3
+
+Fix the issue that cannot paste in settings page.
+
 ### 2.7.0
 
 Add support for MacOS, and remove the compression option for better compatibility.
