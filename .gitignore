@@ -5,3 +5,4 @@ temp/
 .vscode/settings.json
 out/
 lib/imagemin-dist/imagemin.js
+.DS_Store
