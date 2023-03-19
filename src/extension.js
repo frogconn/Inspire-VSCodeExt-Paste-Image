@@ -5,7 +5,7 @@ const logger = require("./logger.js");
 async function activate(context) {
     logger.log("md-paste-image activate");
     let disposable = vscode.commands.registerCommand(
-        "md-paste-enhanced.paste",
+        "md-paste-image.paste",
         function () {
             try {
                 main.main(context);

@@ -2,7 +2,7 @@
     "name": "md-paste-image",
     "displayName": "Paste Image Markdown",
     "description": "use ctrl+v/command+v to paste image directly in markdown",
-    "version": "2.7.0",
+    "version": "2.7.2",
     "engines": {
         "vscode": "^1.76.2"
     },
@@ -41,25 +41,25 @@
     "main": "./src/extension.js",
     "contributes": {
         "configuration": {
-            "title": "Md-Paste-Image",
+            "title": "Paste Image Markdown",
             "type": "object",
             "properties": {
-                "mdPasteEnhanced.path": {
+                "pasteimg.path": {
                     "type": "string",
                     "default": "${currentFileDir}/assets",
                     "description": "The destination to save image file.You can use variable ${currentFileDir} and ${projectRoot}. ${currentFileDir} will be replace by the path of directory that contain current editing file. ${projectRoot} will be replace by path of the project opened in vscode."
                 },
-                "mdPasteEnhanced.basePath": {
+                "pasteimg.basePath": {
                     "type": "string",
                     "default": "${currentFileDir}",
                     "description": "The base path of image url.You can use variable ${currentFileDir} and ${projectRoot}. ${currentFileDir} will be replace by the path of directory that contain current editing file. ${projectRoot} will be replace by path of the project opened in vscode. If you set basePath to empty String, it will insert absolute path to file."
                 },
-                "mdPasteEnhanced.renderPattern": {
+                "pasteimg.renderPattern": {
                     "type": "string",
                     "default": "![](${imagePath})",
                     "description": "The pattern of image url. The ${imagePath} is the path relative to the base path."
                 },
-                "mdPasteEnhanced.confirmPattern": {
+                "pasteimg.confirmPattern": {
                     "type": "string",
                     "default": "None",
                     "enum": [
@@ -69,7 +69,7 @@
                     ],
                     "description": "the pattern that you want to confirm when you paste image"
                 },
-                "mdPasteEnhanced.ImageType": {
+                "pasteimg.ImageType": {
                     "type": "string",
                     "default": ".png",
                     "enum": [
@@ -100,7 +100,7 @@
         "@types/node": "14.x",
         "@types/vscode": "^1.71.0",
         "@vscode/test-electron": "^2.1.3",
-        "esbuild": "^0.15.10",
+        "esbuild": "^0.15.18",
         "eslint": "^8.11.0",
         "glob": "^7.2.0",
         "mocha": "^9.2.2",

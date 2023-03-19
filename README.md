@@ -1,4 +1,4 @@
-# md-paste-enhanced
+# Paste Image Markdown
 
 This is a vscode extension based on [Inspire-VSCodeExt-Paste-Image](https://dzylikecode.github.io/Inspire-VSCodeExt-Paste-Image)  that can paste images from the clipboard when writing markdown by using `ctrl + v` or `command + v`.
 
@@ -17,7 +17,7 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
 
 ## Extension Settings
 
-- `mdPasteEnhanced.path`:string
+- `pasteimg.path`:string
 
   The destination to save image file.
 
@@ -28,7 +28,7 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
   - `${currentFileDir}`: the path of directory that contain current editing file.
   - `${projectRoot}`: the path of the project opened in vscode.
 
-- `mdPasteEnhanced.basePath`:string
+- `pasteimg.basePath`:string
 
   The base path of image url.
 
@@ -39,7 +39,7 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
   - `${currentFileDir}`: the path of directory that contain current editing file.
   - `${projectRoot}`: the path of the project opened in vscode.
 
-- `mdPasteEnhanced.renderPattern`:string
+- `pasteimg.renderPattern`:string
 
   The pattern of image url.
 
@@ -50,7 +50,7 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
   - `${imagePath}`: the path of image file.
 
 
-- `mdPasteEnhanced.confirmPattern`: enum
+- `pasteimg.confirmPattern`: enum
 
   which pattern to be confirmed when paste image
 

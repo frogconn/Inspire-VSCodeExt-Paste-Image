@@ -8,11 +8,11 @@ let fileExt;
 ///////////////////////////////////////
 
 function init(context) {
-    fileDirConfig = vscode.workspace.getConfiguration("mdPasteEnhanced")["path"];
+    fileDirConfig = vscode.workspace.getConfiguration("pasteimg")["path"];
     baseDirConfig =
-        vscode.workspace.getConfiguration("mdPasteEnhanced")["basePath"];
+        vscode.workspace.getConfiguration("pasteimg")["basePath"];
     extensionPath = context.extensionPath;
-    fileExt = vscode.workspace.getConfiguration("mdPasteEnhanced")["ImageType"];
+    fileExt = vscode.workspace.getConfiguration("pasteimg")["ImageType"];
     switch (fileExt) {
         case ".png":
             break;
@@ -63,12 +63,12 @@ module.exports = {
         return fileExt;
     },
     get renderPattern() {
-        return vscode.workspace.getConfiguration("mdPasteEnhanced")[
+        return vscode.workspace.getConfiguration("pasteimg")[
             "renderPattern"
         ];
     },
     get confirmPattern() {
-        return vscode.workspace.getConfiguration("mdPasteEnhanced")[
+        return vscode.workspace.getConfiguration("pasteimg")[
             "confirmPattern"
         ];
     },
