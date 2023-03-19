@@ -10,29 +10,29 @@ const path = require("path");
  * @returns
  */
 async function saveImageDecorator(fn, filePath) {
-  if (fs.existsSync(filePath)) {
-    const choose = await vscode.window.showInformationMessage(
-      `File ${filePath} existed.Would you want to replace?`,
-      "Replace",
-      "Cancel"
-    );
-    if (choose == "Cancel") {
-      return;
+    if (fs.existsSync(filePath)) {
+        const choose = await vscode.window.showInformationMessage(
+            `File ${filePath} existed.Would you want to replace?`,
+            "Replace",
+            "Cancel"
+        );
+        if (choose == "Cancel") {
+            return;
+        }
+    } else mkdir(path.dirname(filePath));
+
+    await fn(filePath);
+
+    return filePath;
+
+    function mkdir(path) {
+        if (!fs.existsSync(path)) {
+            fs.mkdirSync(path, { recursive: true });
+        }
     }
-  } else mkdir(path.dirname(filePath));
-
-  await fn(filePath);
-
-  return filePath;
-
-  function mkdir(path) {
-    if (!fs.existsSync(path)) {
-      fs.mkdirSync(path, { recursive: true });
-    }
-  }
 }
 
 module.exports = {
-  isImage: clipboard.isImage,
-  saveImage: saveImageDecorator.bind(null, clipboard.saveImage),
+    isImage: clipboard.isImage,
+    saveImage: saveImageDecorator.bind(null, clipboard.saveImage),
 };
