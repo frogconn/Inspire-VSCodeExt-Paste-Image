@@ -2,11 +2,11 @@
     "name": "md-paste-enhanced",
     "displayName": "markdown paste enhanced",
     "description": "use ctrl+v to paste image directly in markdown",
-    "version": "2.6.0",
+    "version": "2.7.0",
     "engines": {
-        "vscode": "^1.71.0"
+        "vscode": "^1.76.2"
     },
-    "publisher": "dzylikecode",
+    "publisher": "shinyypig",
     "author": {
         "name": "Dz",
         "email": "mathBeWithCode@gmail.com"
@@ -15,11 +15,11 @@
     "icon": "res/icon.png",
     "repository": {
         "type": "git",
-        "url": "https://github.com/dzylikecode/Inspire-VSCodeExt-Paste-Image"
+        "url": "https://github.com/shinyypig/Inspire-VSCodeExt-Paste-Image"
     },
-    "homepage": "https://github.com/dzylikecode/Inspire-VSCodeExt-Paste-Image/blob/master/README.md",
+    "homepage": "https://github.com/shinyypig/Inspire-VSCodeExt-Paste-Image",
     "bugs": {
-        "url": "https://github.com/dzylikecode/Inspire-VSCodeExt-Paste-Image/issues"
+        "url": "https://github.com/shinyypig/Inspire-VSCodeExt-Paste-Image/issues"
     },
     "keywords": [
         "paste",
@@ -28,6 +28,7 @@
         "paste image",
         "keybindings",
         "WSL",
+        "MacOS",
         "subsystem",
         "compress"
     ],
@@ -93,13 +94,6 @@
             }
         ]
     },
-    "scripts": {
-        "lint": "eslint .",
-        "vscode:prepublish": "npm run imagemin",
-        "pretest": "npm run lint",
-        "test": "node ./test/runTest.js",
-        "imagemin": "esbuild lib/imagemin-dist/imagemin/index.js --bundle --outfile=lib/imagemin-dist/imagemin.js --platform=node"
-    },
     "devDependencies": {
         "@types/glob": "^7.2.0",
         "@types/mocha": "^9.1.0",
@@ -114,10 +108,6 @@
         "vite": "^3.1.8"
     },
     "dependencies": {
-        "imagemin": "^8.0.1",
-        "imagemin-jpegtran": "^7.0.0",
-        "imagemin-pngout": "^5.0.0",
-        "imagemin-pngquant": "^9.0.2",
         "is-wsl": "^2.2.0",
         "moment": "^2.29.4"
     }

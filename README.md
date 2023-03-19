@@ -1,15 +1,19 @@
 # md-paste-enhanced
 
+This is a vscode extension based on [Inspire-VSCodeExt-Paste-Image](https://dzylikecode.github.io/Inspire-VSCodeExt-Paste-Image)  that can paste images from the clipboard when writing markdown by using `ctrl + v` or `command + v`.
+
+I have added the support of MacOS, while the support of Windows and WSL are from:
+
 - market: https://marketplace.visualstudio.com/items?itemName=dzylikecode.md-paste-enhanced
 - online docs: https://dzylikecode.github.io/Inspire-VSCodeExt-Paste-Image/#/
 
-Who can help me write the docs? 😭 😭 😭
-
 It works the same as [Paste Image](https://marketplace.visualstudio.com/items?itemName=mushan.vscode-paste-image) does. What I focus on is to make it work well on WSL and Windows and to use `ctrl + v` to paste images instead of `ctrl + alt + v`.
+
+Besides, I have also removed the compression option for better compatibility.
 
 ## Features
 
-use `ctrl + v` to paste images from the clipboard when writing markdown.
+use `ctrl + v` or `command + v` to paste images from the clipboard when writing markdown.
 
 ## Extension Settings
 
@@ -45,19 +49,6 @@ use `ctrl + v` to paste images from the clipboard when writing markdown.
 
   - `${imagePath}`: the path of image file.
 
-- `mdPasteEnhanced.compressEnable`:boolean
-
-  Whether to compress the image.
-
-  - `default`: false
-
-- `mdPasteEnhanced.compressThreshold`:number
-
-  Unit: KB
-
-  the value which is used to determine whether the image need to be compressed.
-
-  - `default`: 80
 
 - `mdPasteEnhanced.confirmPattern`: enum
 
@@ -83,6 +74,13 @@ use `ctrl + v` to paste images from the clipboard when writing markdown.
 
 ## Release Notes
 
+### 2.7.0
+
+Add support for MacOS, and remove the compression option for better compatibility.
+
+The following are the release notes of [Inspire-VSCodeExt-Paste-Image](https://dzylikecode.github.io/Inspire-VSCodeExt-Paste-Image):
+
+``` markdown
 ### 2.6.0
 
 see: https://github.com/dzylikecode/Inspire-VSCodeExt-Paste-Image/issues/18
@@ -173,3 +171,5 @@ Initial release
 If you want more feature, for example, make it work on Mac and Linux, Please open an issue or pull request. 😏 😏 😏
 
 **Enjoy!** 😊 😊 😊
+
+```
