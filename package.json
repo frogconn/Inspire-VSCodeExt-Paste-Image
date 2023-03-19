@@ -1,15 +1,15 @@
 {
-    "name": "md-paste-enhanced",
-    "displayName": "markdown paste enhanced",
-    "description": "use ctrl+v to paste image directly in markdown",
+    "name": "md-paste-image",
+    "displayName": "Paste Image Markdown",
+    "description": "use ctrl+v/command+v to paste image directly in markdown",
     "version": "2.7.0",
     "engines": {
         "vscode": "^1.76.2"
     },
     "publisher": "shinyypig",
     "author": {
-        "name": "Dz",
-        "email": "mathBeWithCode@gmail.com"
+        "name": "shinyypig",
+        "email": "shinyypig@gmail.com"
     },
     "license": "MIT",
     "icon": "res/icon.png",
@@ -36,12 +36,12 @@
         "Other"
     ],
     "activationEvents": [
-        "onCommand:md-paste-enhanced.paste"
+        "onCommand:md-paste-image.paste"
     ],
     "main": "./src/extension.js",
     "contributes": {
         "configuration": {
-            "title": "Markdown-Paste-Enhanced",
+            "title": "Md-Paste-Image",
             "type": "object",
             "properties": {
                 "mdPasteEnhanced.path": {
@@ -82,14 +82,14 @@
         },
         "commands": [
             {
-                "command": "md-paste-enhanced.paste",
+                "command": "md-paste-image.paste",
                 "title": "paste image from clipboard"
             }
         ],
         "keybindings": [
             {
-                "key": "ctrl+v",
-                "command": "md-paste-enhanced.paste",
+                "key": "command+v",
+                "command": "md-paste-image.paste",
                 "when": "editorTextFocus && editorLangId == markdown"
             }
         ]
