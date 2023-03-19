@@ -74,6 +74,10 @@ use `ctrl + v` or `command + v` to paste images from the clipboard when writing 
 
 ## Release Notes
 
+### 2.7.4
+
+Only active when the file type is markdown.
+
 ### 2.7.3
 
 Fix the issue that cannot paste in settings page.
