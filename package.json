@@ -2,7 +2,7 @@
     "name": "md-paste-image",
     "displayName": "Paste Image Markdown",
     "description": "use ctrl+v/command+v to paste image directly in markdown",
-    "version": "2.7.4",
+    "version": "2.7.5",
     "engines": {
         "vscode": "^1.76.2"
     },
@@ -88,8 +88,9 @@
         ],
         "keybindings": [
             {
-                "key": "command+v",
                 "command": "md-paste-image.paste",
+                "key": "ctrl+v",
+                "mac": "cmd+v",
                 "when": "editorTextFocus && editorLangId == markdown"
             }
         ]
